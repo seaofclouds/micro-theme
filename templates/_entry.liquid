@@ -1,0 +1,55 @@
+<div class="entry hentry" id="entry-{{ article.id }}">
+	<div class="entrytitle">
+	{% if mode == 'single' %}
+	  <h1>{{ article | link_to_article | rel="bookmark" }}</h1> 
+  {% else %}
+    <h2>{{ article | link_to_article | rel="bookmark" }}</h2> 
+  {% endif %}
+		 <p>
+		 <span class="author vcard">
+      {{ article.author.login }}</span>
+		 <span class="date"> / {{ article.published_at | date: '%d.%b.%Y' }}</span>
+		 </p>
+	</div>
+	<div class="entrybody">
+	  {% if article.excerpt %}
+	    {{ article.excerpt }}
+	    {% unless mode == 'single' %}
+		  <p class="more"><a href="{{ article.url }}#jump">Read the Rest</a></a>
+		  {% endunless %}
+		{% else %}
+		  {% unless mode == 'single' %}{{ article.body }}{% endunless %}
+		{% endif %}
+		{% if mode == 'single' %}
+		<div id="jump"></div>
+		  {{ article.body }}
+		{% endif %}
+	</div>
+	
+	<div class="entrymeta">
+	 <p>
+    {% unless mode == 'single' %}
+    <span class="comments">
+  	  {% if article.accept_comments %}
+  	    {% if article.comments_count > 0 %}
+  	      <a href="{{ article.url }}#comments" class="commentslink">{{ article.comments_count | pluralize: 'Comment' }}</a></span>
+  	    {% else %}
+  	      <a href="{{ article.url }}#respond" class="commentslink">Leave a Comment</a>
+  	    {% endif %}
+  	  {% endif %}
+  	  </span>
+  	{% endunless %}
+  	<span class="addto">
+  	  <a href="http://del.icio.us/post?url={{ site_host }}{{ article.url }}&title={{ article.title }}">add to del.icio.us</a>,
+  	  <a href="http://digg.com/submit?phase=2&url={{ site_host }}{{ article.url }}&title={{ article.title}}">digg it</a>
+    </span>
+    {% if article.tags != empty %}
+      <span class="tags">
+        {% for tag in article.tags %}{% if forloop.index > 1 %}, {% endif %}{{ tag | link_to_tag }}{% endfor %}
+      </span>
+    {% endif %}
+	  
+  	 </p>
+	</div>
+	
+</div>

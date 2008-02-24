@@ -1,0 +1,10 @@
+<div class="entry_overview hentry" id="entry-{{ article.id }}">
+	<div class="entrytitle">
+    <h3>{{ article | link_to_article | rel="bookmark" }}</h3> 
+		 <p>
+		 <span class="author vcard">
+      {{ article.author.login }}</span>
+		 <span class="date"> / {{ article.published_at | date: '%d.%b.%Y' }}</span>
+		 </p>
+	</div>
+</div>

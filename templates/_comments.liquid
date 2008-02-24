@@ -1,0 +1,37 @@
+<div class="commentsblock">
+
+{% if article.comments_count > 0 %}
+	<a name="comments"></a>
+	<h3 id="comments" class="feedheader"><a href="{{ article.comments_feed_url }}">{{ article.comments_count | pluralize: 'Comment' }}</a></h3> 
+	
+	{% for comment in article.comments %}
+	<div class="comment {{ comment.presentation_class }}" id="comment-{{ comment.id }}">
+	  <div class="commentbody">
+	    {{ comment.body }}
+		</div>
+		<div class="commentmetadata">
+    {{ comment | gravatar:30,'images/avatar.gif' }} 
+      <big class="commentauthor"><cite>{{ comment.author_link | downcase }}</cite></big> <span class="date">/ {{ comment.created_at | date: '%d.%b.%Y' }}</span><span class="time"><small> at </small>{{ comment.created_at | date: '%I:%M%p' | downcase }}</span>
+    </div>
+	</div>
+  {% endfor %}
+  
+{% endif %}
+
+
+{% if article.accept_comments %}
+<a name="respond"></a>
+<h4 id="respond">Leave a Comment</h4>
+{% commentform %}
+  <p class="input">{{ form.name }}<label for="author">name <small>(required)</small></label></p>
+  <p class="input">{{ form.email }}<label for="email">email <small>(not published, used for <a href="http://site.gravatar.com/">gravatar</a>)</small></label></p>
+  <p class="input">{{ form.url }}<label for="url">website</label></p>
+  <p class="input"><textarea name="comment[body]" id="comment" cols="100%" rows="10">{{ submitted.body, class: entry }}</textarea></p>
+  <p><input name="submit" type="submit" id="submit" value="SUBMIT COMMENT" /></p>
+{% endcommentform %}
+
+{% else %}
+<p>Sorry, comments are closed for this article.</p>
+{% endif %}
+
+</div>

@@ -1,0 +1,6 @@
+<div class="page">
+  <h1 class="header">{{ article.published_at | date: "%B %Y" }}</h1>
+  {% for article in articles %}
+    {% include 'entry_overview' %}
+  {% endfor %}
+</div>

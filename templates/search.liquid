@@ -1,0 +1,10 @@
+<div class="page">
+<h1 class="header">Search results for <em>"{{search_string}}"</em></h1>
+  {% if articles.size > 0 %}
+    {% for article in articles %}
+      {% include 'entry_overview' %}
+    {% endfor %}
+  {% else %}
+    <p>Sorry, there are no results for "{{search_string}}". Please refine your search, and try again.</p>
+  {% endif %}
+</div>

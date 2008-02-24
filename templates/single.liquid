@@ -1,0 +1,8 @@
+{% unless mode == 'page' %}
+  {% include 'entry' %}
+  {% include 'comments' %}
+{% else %}
+  {% include 'page' %}
+{% endunless %}
+
+{% include 'entry_rdf' %}

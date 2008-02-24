@@ -1,0 +1,126 @@
+/* grey-green theme.css */
+
+/* backgrounds: since the content area is white, it's best 
+to choose something darker. also, note the background image
+in doc_container. if you change this color, either remove
+the image, or replace it with a gradient that matches. */
+
+body{
+  background-color:#2b312a;       /* dark grey-green */
+}
+#custom-doc {
+  background-color:#566056;       /* medium grey-green */
+}
+.tabs a {
+  background-color:#7d8d7d;       /* light grey-green */
+}
+.tabs a:hover {
+  background-color: #a7c1a4;      /* light green */
+}
+.commentsblock #submit:hover,			
+.commentsblock input.button:hover {
+  background-color:#ddd;					/* light grey */
+}
+.tabs a.selected:hover,
+.tabs a.selected,
+.entry blockquote,
+.commentsblock #submit {
+  background-color:#eee;					/* lightest grey */
+}
+.page,
+.entry,
+.block,
+.commentsblock {
+	background-color:#fff;    			/* white */
+}
+
+/* background images */
+
+.doc-container {
+  background-image: url(/images/gray-bottom-gradient.jpg); 
+}
+.page,
+.entry,
+.block {
+ 	background-image: url(/images/gray-top-gradient.gif);
+  background-repeat:repeat-x;
+  background-position:top;
+}
+#ft .backtotop a {
+  background-image: url(/images/gray-up-arrow-white.gif);
+}
+
+/* link and text colors */
+
+a,
+body{
+	color:#566056;                  /* grey-green */
+}
+a:hover{
+ 	color:#427e5b;                  /* dark green */
+}
+.commentsblock #submit,
+#sidebar h3,
+#sidebar h3 a,
+.commentsblock h3,
+.commentsblock h3 a,
+.commentsblock h4,
+.content h1,
+.content h1 a,
+.dropcap,
+.entrytitle h1 a,
+.entrytitle h2 a,
+#hd .tabs a {
+  color: #333;                    /* dark grey */
+}
+.commentmetadata {
+  color: #555;                    /* medium grey */
+}
+#sform input,
+.grey,
+.soft,
+.caption,
+.entrytitle .author,
+.more a,
+.more a:hover,
+.commentsblock label,
+.commentsblock label small,
+.commentmetadata .date,
+.latestcomments .date   {
+  color:#777;                     /* grey */
+}
+.entrytitle .date,
+.commentmetadata .time,
+.latestcomments .time {
+	color: #999
+}
+.commentmetadata .time small {
+  color:#ccc;
+}
+
+#logo,
+#logo a,
+#logo a:hover,
+#ft,
+#ft a,
+#ft a:hover {
+	color:#fff;                     /* white */
+}
+
+/* other style corrections */
+
+.page,
+.entry,
+.block,
+.tabs a {
+  padding:1em;
+}
+#sform .input {
+  border:none;
+}
+.entry blockquote {
+  border:1px solid #ccc;
+}
+.commentsblock #submit {
+  border:1px solid #999;
+}

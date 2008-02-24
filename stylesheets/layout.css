@@ -1,0 +1,365 @@
+/* layout.css */
+
+/*************************************
+ +Containers
+ *************************************/
+
+#custom-doc { width:42.62em;*width:41.59em;min-width:554px; margin:auto; text-align:left; } 
+
+.doc-container {
+  padding-left:1.1em;
+  padding-right:1.1em;
+  background-repeat:repeat-x;
+  background-position:bottom;
+}
+#hd {
+  padding-top:.5em;
+  padding-bottom:.9em;
+}
+#hd.hd_tabbed  {
+  padding-bottom:0;
+}
+* html #hd.hd_tabbed  {
+  margin-bottom:-.3em;
+}
+#logo {
+	float:left;
+}
+* html #logo {
+	margin-bottom:-1em;
+	width:20em;
+}
+#hd.hd_tabbed #logo {
+  float:none;
+}
+* html #hd.hd_tabbed #logo {
+  width:auto;
+  margin-bottom:.3em;
+}
+#hd h1,
+#hd h3,
+#hd h5 {
+	font-weight:bold;
+}
+#hd h1,
+#hd h3 {
+	font-size:360%;
+}
+#hd.hd_tabbed h1,
+#hd.hd_tabbed h3 {
+  margin-top:.1em;
+  margin-bottom:0;
+  display:inline;
+}
+* html #hd h5 {
+	margin-top:-.5em;
+}
+#hd.hd_tabbed h5 {
+  display:inline;
+}
+#hd h1 a,
+#hd h3 a,
+#hd h5 a {
+	text-decoration:none;
+}
+
+#sform {
+  margin-top:3.7em;
+  float:right;
+  position:relative;
+}
+#hd.hd_tabbed #sform {
+  margin:0;
+}
+#sform .input {
+  border:1px solid #999;
+  width:12em;
+  background-color:#fff;
+  padding:.4em 25px .4em .4em;
+  font-weight:bold;
+}
+#sform .button {
+  position:absolute;
+  right:.5em;
+  top:.3em;
+  z-index:1;
+}
+
+.tabs a {
+  padding:1em 1em 1em 0;
+  float:left;
+  margin-right:.5em;
+  text-decoration:none;
+  text-transform:uppercase;
+  font-size:85%;
+  font-weight:bold;
+}
+
+
+#ft {
+  padding-top:3em;
+  padding-bottom:1em;
+  font-family:verdana;
+  font-size:85%;
+}
+#ft .backtotop {
+  float:right;
+  font-family:arial;
+  font-weight:bold;
+  text-transform:uppercase;
+}
+#ft .backtotop a {
+  text-decoration:none;
+  background-image: url(/images/up-arrow.gif);
+  background-position: center right;
+	background-repeat: no-repeat;
+	padding:0 15px 0 0;
+}
+ 
+/*************************************
+ +Entry
+ *************************************/
+
+.page,
+.entry,
+.block {
+ 	margin-bottom:1em;
+}
+.page .entry,
+.entry .entry {
+  background:none;
+  padding:0;
+ 	margin-bottom:0;
+}
+.entry p,
+.entry blockquote,
+.entry pre,
+.entry ol,
+.entry ul,
+#comment-errors {
+  margin-bottom:1em;
+}
+.entry h1 {
+  margin-bottom:.3em;
+}
+.entry h2 {
+  margin-bottom:.4em;
+}
+.entry h3,
+.entrytitle {
+  margin-bottom:.5em;
+}
+.entry h4 {
+  margin-bottom:.6em;
+}
+.entry h5 {
+  margin-bottom:.7em;
+}
+.entry h6 {
+  margin-bottom:1em;
+}
+.entry blockquote,
+.entry pre {
+  padding-top:1em;
+  padding-right:1em;
+  padding-left:1em;
+}
+.entry ol,
+.entry ul,
+#comment-errors  {
+  margin-left:1.6em;
+}
+.entry ol li {
+list-style-type:decimal;
+}
+#comment-errors li,
+.entry ul li {
+list-style-type:square;
+}
+.entrytitle h1,
+.entrytitle h2 {
+  font-size:200%;
+  text-transform:capitalize;
+  margin-bottom:0;
+}
+.entrytitle h3 {
+  text-transform:capitalize;
+}
+.entrytitle a{
+  text-decoration:none;
+}
+.entrytitle a:hover{
+  text-decoration:underline;
+}
+.entrytitle p {
+  text-transform:uppercase;
+}
+.entrytitle .date,
+.entrytitle .author {
+  text-wrap:none;
+}
+.entrytitle .author {
+  text-wrap:none;
+}
+.entrymeta{
+	font-size:85%;
+	font-family:verdana;
+	border-top:2px dotted #ccc;
+	padding-top:.8em;
+	clear:both;
+	margin-bottom:0;
+}
+.entrymeta p{
+	line-height:1.2em;
+	margin-bottom:0;
+}
+.entrymeta .tags,
+.entrymeta .comments,
+.entrymeta .addto {
+  background-position: center left;
+	background-repeat: no-repeat;
+	padding:4px;
+	padding-left:20px;
+}
+.entrymeta .comments,
+.entrymeta .addto {
+	white-space: nowrap;
+}
+.entrymeta .tags {
+  background-image: url(/images/icon-tag.gif);
+}
+.entrymeta .comments {
+  background-image: url(/images/icon-comment.gif);
+}
+.entrymeta .addto {
+  background-image: url(/images/icon-add.gif);
+}
+.more {
+  font-family:verdana;
+  font-size:85%;
+  font-weight:bold;
+  text-align:right;
+}
+.more a {
+  background-image: url(/images/icon-next.gif);
+  background-position: center right;
+	background-repeat: no-repeat;
+  padding:4px;
+  padding-right:20px;
+  text-decoration:none;
+}
+.more a:hover {
+  text-decoration:underline;
+}
+
+/* headers */
+
+#sidebar h3,
+.header {
+  font-size:100%;
+  padding-bottom:.5em;
+  font-weight:bold;
+  text-transform:uppercase;
+}
+h1.header {
+  margin-bottom:1em;
+}
+.feedheader a {
+  background-image: url(/images/feed-icon-12x12.gif);
+  background-repeat:no-repeat;
+  background-position:top right;
+  text-decoration:none;
+  padding-right:17px;
+}
+
+/*************************************
+ +Sidebar
+ *************************************/
+
+.latestcomments  {
+  color:#555;
+}
+.latestcomments p {
+  padding-bottom:.5em;
+}
+#sidebar .recententries ul.square {
+  margin-bottom:0;
+}
+/*************************************
+ +Comments
+ *************************************/
+ 
+.commentsblock{
+	padding:1em;
+	margin-bottom:1em;
+}
+.commentsblock h3,
+.commentsblock h4 {
+  font-size:100%;
+  font-weight:bold;
+  text-transform:uppercase;
+  margin-bottom:.5em;
+}
+.commentsblock p {
+  margin-bottom:.5em;
+}
+.commentsblock textarea{
+	width:36.6em;
+	min-width:470px;
+}
+.commentsblock p.input input {
+  margin-right:.5em;
+}
+.commentsblock p.input input, 
+.commentsblock textarea{
+	border:1px solid #999;
+}
+.commentsblock textarea:focus,
+.commentsblock p.input input:focus{
+	background-color:#eee;
+}
+.commentsblock label {
+  text-transform:uppercase;
+  font-size:95%;
+}
+.commentsblock label small {
+  text-transform:lowercase;
+}
+.commentsblock #submit {
+  font-size:95%;
+  font-weight:bold;
+  padding:.5em;
+	cursor:pointer;
+}
+
+.comment {
+  margin-bottom:1em;
+}
+.commentbody {
+  background-color:#ddd;
+  padding:1em;
+}
+.commentmetadata {
+  background-image:url(/images/comment_quote-small.gif);	
+  background-repeat:no-repeat;
+  background-position: 50px 0;
+  padding-top:10px;
+  padding-left:10px;
+  text-transform:lowercase;
+}
+.commentmetadata .date,
+.latestcomments .date {
+  text-transform:uppercase;
+}
+#comment-errors {
+  color:#c00;
+}
+.alt {
+	background:#eee;
+	border:1px dotted #ccc;
+	padding:0.5em;
+}
+
+a {
+color: #333;
+}
